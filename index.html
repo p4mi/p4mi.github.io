@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> M8 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="columns">
+        <div class="column headtext">
+          Scroll Down
+        </div>
+
+        <div class="column" id="center_column">
+          <img src="images/logo_avg.png" alt="M8 Logo" title="M8">
+        </div>
+
+        <div class="column headtext">
+          Have Fun
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar">
+      <a class="active" href="">Home</a>
+      <a class="log" id="login" href="register.html" style="float:right">Register</a>
+      <a class="log" id="login" href="login.html" style="float:right">Sign Up</a>
+    </div>
+
+    <section class="categories">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="" style="color:red">Hot</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Funny</a></li>
+        <li><a href="">Animals</a></li>
+        <li><a href="">Car</a></li>
+        <li><a href="">Food</a></li>
+        <li><a href="">Horror</a></li>
+        <li><a href="">Music</a></li>
+        <li><a href="">School</a></li>
+        <li><a href="">Superhero</a></li>
+        <li><a href="">Star Wars</a></li>
+        <li><a href="">Sport</a></li>
+        <li><a href="">Travel</a></li>
+        <li><a href="">Video</a></li>
+        <li><a href="">Wallpaper</a></li>
+      </ul>
+    </section>
+
+    <div class="content">
+      <div class="ate">
+        <div><a href="ate.html"><h2>It's True</h2></a></div>
+        <div><img src="images/its_true.png" alt="Tom Revives"></div>
+        <div class="section">
+          <a href="login.html"><i class="fa fa-arrow-circle-up" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-arrow-circle-down" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-commenting" style="font-size:2vw"></i></a>
+          <div class="stats">
+            <a href="">534 points</a>
+            <a href="ate.html">78 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+       <div class="ate">
+        <div><a href="ate2.html"><h2>The amount of people who cheap out on beds is too damn high!</h2></a></div>
+        <div><img src="images/good_bed.png" alt="Good bed - a must"></div>
+        <div class="section">
+          <a href="login.html"><i class="fa fa-arrow-circle-up" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-arrow-circle-down" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-commenting" style="font-size:2vw"></i></a>
+          <div class="stats">
+            <a href="">333 points</a>
+            <a href="ate2.html">41 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="ate">
+        <div><a href="ate3.html"><h2>Australian sea lion and pup</h2></a></div>
+        <div><img src="images/sea_lion.png" alt="Sea lion and pup"></div>
+        <div class="section">
+          <a href="login.html"><i class="fa fa-arrow-circle-up" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-arrow-circle-down" style="font-size:2vw"></i></a>
+          <a href="login.html"><i class="fa fa-commenting" style="font-size:2vw"></i></a>
+          <div class="stats">
+            <a href="">400 points</a>
+            <a href="ate3.html">55 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    /*function hideLogin() {
+    document.getElementById("login").style.visibility = "hidden";
+    }
+
+    var logged_user = false;
+    if(logged_user){
+      hideLogin();
+    }*/
+
+    </script>
+
+  </body>
+</html>

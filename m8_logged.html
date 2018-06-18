@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> M8 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="columns">
+        <div class="column headtext">
+          Scroll Down
+        </div>
+
+        <div class="column" id="center_column">
+          <img src="images/logo_avg.png" alt="M8 Logo" title="M8">
+        </div>
+
+        <div class="column headtext">
+          Have Fun
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar">
+      <a class="active" href="">Home</a>
+      <a class="log" id="login" href="m8_logged_messages.html"> Messages</a>
+      <a class="log" id="login" href="index.html" style="float:right;"> Log Out</a>
+      <a id="login" href="m8_logged_upload.html" style="float:right;"> Upload ATE</a>
+    </div>
+
+    <section class="categories">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="" style="color:red">Hot</a></li>
+        <li><a href="">Trending</a></li>
+        <li><a href="">Funny</a></li>
+        <li><a href="">Animals</a></li>
+        <li><a href="">Car</a></li>
+        <li><a href="">Food</a></li>
+        <li><a href="">Horror</a></li>
+        <li><a href="">Music</a></li>
+        <li><a href="">School</a></li>
+        <li><a href="">Superhero</a></li>
+        <li><a href="">Star Wars</a></li>
+        <li><a href="">Sport</a></li>
+        <li><a href="">Travel</a></li>
+        <li><a href="">Video</a></li>
+        <li><a href="">Wallpaper</a></li>
+      </ul>
+    </section>
+
+    <div class="content">
+      <div class="ate">
+        <div><a href="ate_logged.html"><h2>It's True</h2></a></div>
+        <div><img src="images/its_true.png" alt="Tom Revives"></div>
+        <div class="section">
+          <a onclick="upVote(this.id)" id="ate1"><i class="fa fa-arrow-circle-up" style="font-size:1.875vw"></i></a>
+          <a onclick="downVote(this.id)" id="ate1"><i class="fa fa-arrow-circle-down" style="font-size:1.875vw"></i></a>
+          <a href="ate_logged.html"><i class="fa fa-commenting" style="font-size:1.875vw"></i></a>
+          <a onclick="shareFb()"><img src="images/fb.png" class="fb" alt="FB logo"></a>
+          <a onclick="addToFavs()"><img src="images/heart.png" class="heart" alt="2 hearts shape"></a>
+          <div class="stats">
+            <a><var id="ate1-">534</var> points</a>
+            <a href="ate_logged.html">78 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+       <div class="ate">
+        <div><a href="ate2_logged.html"><h2>The amount of people who cheap out on beds is too damn high!</h2></a></div>
+        <div><img src="images/good_bed.png" alt="Good bed - a must"></div>
+        <div class="section">
+          <a onclick="upVote(this.id)" id="ate2"><i class="fa fa-arrow-circle-up" style="font-size:1.875vw"></i></a>
+          <a onclick="downVote(this.id)" id="ate2"><i class="fa fa-arrow-circle-down" style="font-size:1.875vw"></i></a>
+          <a href="ate2_logged.html"><i class="fa fa-commenting" style="font-size:1.875vw"></i></a>
+          <a onclick="shareFb()"><img src="images/fb.png" class="fb" alt="FB logo"></a>
+          <a onclick="addToFavs()"><img src="images/heart.png" class="heart" alt="2 hearts shape"></a>
+          <div class="stats">
+            <a><var id="ate2-">333</var> points</a>
+            <a href="ate2_logged.html">41 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="ate">
+        <div><a href="ate3_logged.html"><h2>Australian sea lion and pup</h2></a></div>
+        <div><img src="images/sea_lion.png" alt="Sea lion and pup"></div>
+        <div class="section">
+          <a onclick="upVote(this.id)" id="ate3"><i class="fa fa-arrow-circle-up" style="font-size:1.875vw"></i></a>
+          <a onclick="downVote(this.id)" id="ate3"><i class="fa fa-arrow-circle-down" style="font-size:1.875vw"></i></a>
+          <a href="ate3_logged.html"><i class="fa fa-commenting" style="font-size:1.875vw"></i></a>
+          <a onclick="shareFb()"><img src="images/fb.png" class="fb" alt="FB logo"></a>
+          <a onclick="addToFavs()"><img src="images/heart.png" class="heart" alt="2 hearts shape"></a>
+          <div class="stats">
+            <a><var id="ate3-">400</var> points</a>
+            <a href="ate3_logged.html">55 comments</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    function upVote(id) {
+      document.getElementById(id + "-").innerHTML = parseInt(document.getElementById(id + "-").innerHTML) + 1;
+    }
+
+    function downVote(id) {
+      document.getElementById(id + "-").innerHTML = parseInt(document.getElementById(id + "-").innerHTML) - 1;
+    }
+
+    function shareFb() {
+      prompt("Share to Facebook.\nAdd text to the post:", "Haha. So funny :D");
+    }
+
+    function addToFavs(){
+      alert("Added to Favourites!");
+    }
+
+    </script>
+
+  </body>
+</html>

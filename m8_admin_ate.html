@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> M8 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/admin_ate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  </head>
+  <body>
+  	<div class="header">
+  	  <div id="navbar">
+        <a href="m8_admin.html">Home</a>
+        <a id="queue" href="m8_admin_queue.html" style="float:right;">Queue</a>
+      </div>
+  	</div>
+
+   <section class="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="" style="color:red">Hot</a></li>
+      <li><a href="">Trending</a></li>
+      <li><a href="">Funny</a></li>
+      <li><a href="">Animals</a></li>
+      <li><a href="">Car</a></li>
+      <li><a href="">Food</a></li>
+      <li><a href="">Horror</a></li>
+      <li><a href="">Music</a></li>
+      <li><a href="">School</a></li>
+      <li><a href="">Superhero</a></li>
+      <li><a href="">Star Wars</a></li>
+      <li><a href="">Sport</a></li>
+      <li><a href="">Travel</a></li>
+      <li><a href="">Video</a></li>
+      <li><a href="">Wallpaper</a></li>
+    </ul>
+  </section>
+
+	<div class="content">
+      <div class="ate">
+        <div><h2>It's True</h2></div>
+        <div><img src="images/its_true.png" alt="Tom Revives"></div>
+        <div class="section">
+          <a onclick="upVote()"><i class="fa fa-arrow-circle-up" style="font-size:1.875vw"></i></a>
+          <a onclick="downVote()"><i class="fa fa-arrow-circle-down" style="font-size:1.875vw"></i></a>
+          <a onclick="shareFb()"><img src="images/fb.png" class="fb" alt="FB logo"></a>
+          <a onclick="addToFavs()"><img src="images/heart.png" class="heart" alt="2 hearts shape"></a>
+          <a href="m8_admin_remove_ate.html" class="remove">Remove</a>
+          <div class="count">78 comments</div>
+          <div class="count"><var id="points">534</var> points</div>
+        </div>
+        <hr>
+  	  </div>
+
+  	  <div class="comment_section">
+  	  	<div class="comment_field">
+          <i class="fas fa-user" style="font-size:3vw"></i>
+          <textarea class="input_comment" name="comment" form="comment_form" placeholder="Write a comment..."></textarea>
+	      <form action="" id="comment_form">
+	        <input class="button" type="submit" value="Post">
+	      </form>
+        </div> 
+
+        <div class="comment">
+          <img src="images/user1.jpg" alt="user" width="58" height="58">
+          <span class="username">beauty715</span>
+          <span class="before">5h</span>
+          <div class="comment_text">
+            those stairs are black and blue
+          </div>
+          <button onclick="deleteComment(this.id)" class="remove" id="com1">Remove</button>
+        </div>
+
+        <div class="comment">
+          <img src="images/user3.jpg" alt="user" width="58" height="58">
+          <span class="username">romadumb</span>
+          <span class="before">8h</span>
+          <div class="comment_text">
+            Can anyone explain what a quizlet is
+          </div>
+          <button onclick="deleteComment(this.id)" class="remove" id="com2">Remove</button>
+        </div>
+
+        <div class="comment">
+          <img src="images/user2.jpg" alt="user" width="58" height="58">
+          <span class="username">dolphinan</span>
+          <span class="before">9h</span>
+          <div class="comment_text">
+            Darkest and saddest tom n jerry episode
+          </div>
+          <button onclick="deleteComment(this.id)" class="remove" id="com3">Remove</button>
+        </div>
+
+  	  </div>
+
+      </div>
+	</div>
+
+ <script>
+    var upOnce = false;
+    var downOnce = false;
+
+    function deleteComment(id) {
+    var txt = "Remove";
+    var reason = prompt("Send a message to the author. Reason of deleting this comment:", "Inappropriate content.")
+    if (reason != null && reason != "") {
+      txt = "Loading...";
+    }
+
+    document.getElementById(id).innerHTML = txt;
+    }
+
+    function upVote() {
+      if (!upOnce) {
+        upOnce = true;
+      document.getElementById("points").innerHTML = parseInt(document.getElementById("points").innerHTML) + 1;
+      }
+    }
+
+    function downVote() {
+      if (!downOnce) {
+        downOnce = true;
+      document.getElementById("points").innerHTML = parseInt(document.getElementById("points").innerHTML) - 1;
+      }
+    }
+
+    function shareFb() {
+      prompt("Share to Facebook.\nAdd text to the post:", "Haha. So funny :D");
+    }
+    
+    function addToFavs(){
+      alert("Added to Favourites!");
+    }
+
+  </script>
+
+  </body>
+</html>
